@@ -1,0 +1,42 @@
+.mt-10{
+    margin-top:10px;
+}
+
+.fl{
+    float:left;
+}
+
+.bold-content{
+    font-weight: bolder;
+    font-size: 20px;
+    font-style: oblique;
+    color: indianred;
+}
+
+.footer{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 30px;
+    font-style: oblique;
+    color: indianred;
+    margin-bottom: 300px;
+
+}
+
+.suggetion{
+    border:1px solid #AEEBBA;
+    float:left;
+    padding-left:10px;
+    margin-bottom: 20px;
+}
+
+.blink-text{
+    color:green;
+    animation: blink 1s linear infinite;
+}
+
+@keyframes blink{
+    0%{opacity: 0;}
+    50%{opacity: .5;}
+    100%{opacity: 1;}
+    }
