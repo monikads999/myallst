@@ -5,6 +5,7 @@
 .fl{
     float:left;
 }
+p{font-size: 15px;}
 
 .bold-content{
     font-weight: bolder;
@@ -40,3 +41,18 @@
     50%{opacity: .5;}
     100%{opacity: 1;}
     }
+h2{
+	color: chocolate;
+	font-size: 25px;
+	}	
+h6{display:inline;}
+
+pre{
+	background:#F3EBEB;
+	padding: 15px;
+    border-radius: 10px;
+}
+
+.orange{color:orange;}
+.blue{color:blue;}
+.green{color:green;}
