@@ -117,17 +117,17 @@
 					</div>
 					<div class="container-fluid"> 
 						<h2>- Rules for a functional interface</h2>
-							<p><ul>
+							<p><ol>
 								  <li>A functional interface must have exactly one abstract method.</li>
 								  <li>A functional interface can have any number of default, static methods</li>
 								  <li>No need to declare the abstract keyword as by default the method defined inside the interface is abstract only.</li>
-								</ul>                   
+                            </ol>                   
 							</p>
 					</div>	
 					<div class="container-fluid"> 
 						<h2>- Example of functional interface with lambda</h2>
 <pre>
-<span class="orange">@FunctionalInterface</span><span class="green"> //It is optional</span>
+<span class="orange">/*@FunctionalInterface*/</span><span class="green"> //It is optional</span>
 <span class="orange">public interface </span> MultipleInterface {
 	public <span class="orange">int</span> <span class="blue">multiple(int x,int y)</span>;
 }
@@ -148,7 +148,129 @@
 Output:
 Multiple Value is 200
 </pre>
-					</div>									
+					</div>	
+
+					<div class="container-fluid"> 
+						<h2>- @FunctionalInterface Annotation</h2>
+							<p>
+                                @FunctionalInterface annotation is optional but it is used to ensure that the functional interface
+                                can’t have more than one abstract method.  If you add more than one abstract methods, an ‘Unexpected @FunctionalInterface annotation’ message you can get.
+                                It is not mandatory to use this annotation.              
+							</p>
+					</div>	
+                    
+                    <div class="container-fluid"> 
+						<h2>- Example of functional interface with @FunctionalInterface annotation</h2>
+<pre>
+<span class="blue"><b>@FunctionalInterface</span><span class="green"> //It is optional</b></span>
+<span class="orange">interface </span> Area {
+	<span class="orange">int</span> <span class="blue">calculateArea(int x)</span>;
+}
+
+<span class="orange">class</span> Square {
+	<span class="orange">public static void</span> <span class="blue">main</span>(String[] args) {
+
+		//with lambda
+		Area a = (x) -> {			
+			return x * *;
+		};
+
+	  <span class="orange">int</span> areaVal =   a.calculateArea(<span class="green">10</span>);
+	  System.<span class="blue">out</span>.println(<span class="green">"Area of Square is "</span>+areaVal);
+}
+
+Output:
+Area of Square is 100
+</pre>
+					</div>	
+
+                    <div class="container-fluid"> 
+						<h2>- Types of functional interface</h2>
+							<p>
+                                <h6>There are four types of functional interfaces.</h6>
+
+                                <ol>
+                                    <li>Consumer -> Bi-Consumer</li>
+                                    <li>Predicate -> Bi-Predicate</li>
+                                    <li>Function -> Bi-Function, Unary Operator, Binary Operator/li>
+                                    <li>Supplier</li>
+                                </ol>  
+                                <h2 class="m-l-20">1. Consumer</h2>
+                                <p>
+                                    The consumer interface of the functional interface accepts only one argument without any return value.
+                                    The consumer interface has no return value. It contains an abstract accept() and a default andThen() method. 
+                                    It can be used as the assignment target for a lambda expression or method reference.
+                                    
+                                    <h6>Consumer Interface Methods.</h6>
+                                    <ol>
+                                        <li>void accept(T t)</li>
+                                        <dd>- accept() method takes as input the type T and returns no value. This is the single abstract method of Consumer.
+                                             It accepts a single generic argument of type T and returns nothing (i.e. void). This is the method that's implemented 
+                                             by a lambda expression or method reference.</dd>
+                                        <li>andThen(Consumer<? super T> after)</li>
+                                        <dd>- This is a default method. In other words, it has an implementation and is thus non-abstract.
+                                             The method accepts a Consumer and returns another Consumer. 
+                                    </ol>
+                                    
+                                    <h2 class="m-l-20"> Example of Consumer Interface</h2>
+<pre>
+<span class="blue">import java.util.function.Consumer; </span>
+<span class="orange">public <span class="blue">class</span> ConsumerInterfaceExample </span> Area {
+
+    <span class="orange">static </span> <span class="blue">void </span> welcomeGreeting (String name){
+        System.<span class="blue">out</span>.println("Welcome "+name);
+    }
+
+    <span class="orange">static </span> <span class="blue">void </span> showAge (int age){
+          System.<span class="blue">out</span>.println("Your age is "+age);
+    }
+
+    <span class="orange">static </span> <span class="blue">void </span> showSalary (int sal){
+          System.<span class="blue">out</span>.println("Your salary is "+sal);
+    }
+
+
+    <span class="orange">public static void</span> <span class="blue">main</span>(String[] args) {
+        Consumer<<span class="blue">String</span>> consumer1 = ConsumerInterfaceExample::welcomeGreeting; //method reference 
+        consumer1.accept("Tejas");   // Calling Consumer method  
+             
+        Consumer<<span class="blue">Integer</span>> consumer2 = ConsumerInterfaceExample::showAge;  //method reference
+        consumer2.accept(30);   // Calling Consumer method  
+
+        Consumer<<span class="blue">Integer</span>> consumer2 = ConsumerInterfaceExample::showSalary;  //method reference
+        consumer2.accept(20000);   // Calling Consumer method  
+    }
+}
+
+Output:
+Welcome Tejas
+Your age is 30
+Your salary is 20000
+</pre>
+
+                                </p>
+                                <h2 class="m-l-20">Bi-Consumer</h2>
+                                <p>
+                                    The different between Consumer and Bi-Consumer is Consumer takes only one argument,
+                                     but Bi-Consumer interface takes two arguments. Both, Consumer and Bi-Consumer have no return value.
+                                      It is used in iterating through the entries of the map. 
+                                    
+                                </p>
+
+                                <pre> BiConsumer<String,String> foo = (a, b) -> System.out.println(a + b); </pre>
+
+
+                                <p>
+
+							</p>
+					</div>
+                    
+
+
+
+
+
+					
 				</div>        
 		</div>
 	</div>

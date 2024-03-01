@@ -47,6 +47,12 @@ h2{
 	}	
 h6{display:inline;}
 
+ul,ol{
+		padding:20px 0px 0px 30px;
+		
+		
+	}
+
 pre{
 	background:#F3EBEB;
 	padding: 15px;
@@ -56,3 +62,6 @@ pre{
 .orange{color:orange;}
 .blue{color:blue;}
 .green{color:green;}
+
+
+.m-l-20{margin-left:0px;}
