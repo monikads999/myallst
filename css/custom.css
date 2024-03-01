@@ -65,3 +65,17 @@ pre{
 
 
 .m-l-20{margin-left:0px;}
+
+.list-group ul{
+  margin: 10px 0px 0px 10px;
+  padding: 0;
+}
+.list-group ul li{list-style-type: none;}
+
+a.list-group-item:hover{
+  z-index: 1;
+  text-decoration: none;
+  background-color: #F3EBEB;
+  color: #8A2BE2;
+  font-weight: bold;
+}
