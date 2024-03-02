@@ -1,3 +1,14 @@
+#logo{
+	height: 100px;
+	width:200px;
+	border:none;
+}
+
+#right-main-div{
+	border:1px solid rgba(0, 0, 0, 0.125);
+}
+
+
 .mt-10{
     margin-top:10px;
 }
@@ -79,3 +90,15 @@ a.list-group-item:hover{
   color: #8A2BE2;
   font-weight: bold;
 }
+
+@keyframes blinker {
+                50% {
+                    opacity: 0;
+                }
+            }
+
+#blink {
+        animation: blinker 1.5s linear infinite;
+        color: #117864;
+        transition: 0.5s;
+       }
