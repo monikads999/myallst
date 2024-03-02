@@ -10856,6 +10856,7 @@ textarea.form-control-lg {
 }
 #wrapper {
   overflow-x: hidden;
+  padding-bottom: 50px;
 }
 
 #sidebar-wrapper {
