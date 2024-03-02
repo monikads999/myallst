@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://myallstudy.com/index.html</loc>
     <loc>https://myallstudy.com/free-website-hosting-on-github.html</loc>
 	<loc>https://myallstudy.com/functional-interfaces-in-java-8.html</loc>
 	<loc>https://myallstudy.com/biconsumer-interfaces-in-java.html</loc>
 	<loc>https://myallstudy.com/consumer-interfaces-in-java.html</loc>
+	<loc>https://myallstudy.com/predicate-interfaces-in-java.html</loc>
+	<loc>https://myallstudy.com/supplier-interface-in-java.html</loc>
+	<loc>https://myallstudy.com/function-interface-in-java.html</loc>
     <lastmod>2024-03-02</lastmod>
   </url>
 </urlset>
