@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset=utf-8>
+
         <link rel="apple-touch-icon" sizes="180x180" href="image/fevicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="image/fevicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="image/fevicon/favicon-16x16.png">
@@ -9,7 +10,7 @@
         <link rel="mask-icon" href="image/fevicon/safari-pinned-tab.svg" color="#5bbad5">    
         <link rel="shortcut icon" sizes="16x16" href="image/fevicon/favicon-16x16.png" type=image/x-icon>
         <link rel=preconnect href=https://fonts.googleapis.com>
-        <link rel=canonical href=https://myallstudy.com/index.html>
+        <link rel=canonical href=https://myallstudy.com/functional-interfaces-in-java-8.html>
         <link rel="icon" type="image/x-icon" href="image/fevicon/favicon-16x16.png" />
         <link href="css/styles.css" rel="stylesheet" />
         <link href="css/custom.css" rel="stylesheet" />
@@ -33,7 +34,7 @@
         <meta property="article:published_time" content="2024-03-2T12:59:35+00:00">
         <meta property="article:modified_time" content="2024-03-2T12:59:35+00:00">
         <meta property="og:updated_time" content="2024-03-2T12:59:35+00:00">
-        <title>Functional Interface In Java</title> 
+        <title>Functional Interface In Java</title>
     </head>
     <body>   
         <div class="d-flex" id="wrapper">
@@ -63,12 +64,7 @@
                             <a class="list-group-item p-3 " target="_blank" href="https://myallstudy.com/predicate-interfaces-in-java.html">
                                 <span>Predicate Interface In Java in Details</span>
                             </a>
-                        </li>
-                        <li>
-                            <a class="list-group-item p-3 " target="_blank" href="https://myallstudy.com/supplier-interfaces-in-java.html">
-                                <span>Supplier Interface In Java in Details</span>
-                            </a>
-                        </li>        
+                        </li>    
                         <li>
                             <a id="blink" class="list-group-item p-3 last" target="_blank" href="https://myallstudy.com/free-website-hosting-on-github.html">
                                 <span>Free Website Hosting on GitHub Full Tutorial</span>
@@ -81,7 +77,7 @@
             <div id="page-content-wrapper">
                 <div class="d-flex justify-content-between">
                     <div>
-                        <h1 class="mt-4">Functional Interfaces In Java 8</h1>
+                        <h1 class="mt-2">Functional Interfaces In Java 8</h1>
                     </div>
                     <div class="next-botton-top">  
                         <span class="next-botton">Next Topic >></span>
@@ -89,7 +85,7 @@
                             <span>Consumer Interface In Java</span>
                         </a>
                     </div> 
-                </div>  
+                </div> 
 				<div id="right-main-div">
 					<div class="container-fluid">        
 						<h2>- What is Functional Interface?</h2>
@@ -182,10 +178,10 @@ Area of Square is 100
                                 <h6>There are four types of functional interfaces.</h6>
 
                                 <ol>
-                                    <li>Consumer -> Bi-Consumer</li>
-                                    <li>Predicate -> Bi-Predicate</li>
-                                    <li>Function -> Bi-Function, Unary Operator, Binary Operator/li>
-                                    <li>Supplier</li>
+                                    <li><b>Consumer -> Bi-Consumer</b></li>
+                                    <li><b>Predicate -> Bi-Predicate</b></li>
+                                    <li><b>Function -> Bi-Function, Unary Operator, Binary Operator</b></li>
+                                    <li><b>Supplier</b></li>
                                 </ol>  
                                 <h2 class="m-l-20">1. Consumer</h2>
                                 <p>
@@ -255,18 +251,179 @@ Your salary is 20000
                                 <p>
 
 							</p>
-					</div>
-                    <div class="container-fluid"> <br>  
-                        <span class="next-botton">Next Topic >></span>
-                        <a target="_blank" href="https://myallstudy.com/consumer-interfaces-in-java.html">
-                            <span>Consumer Interface In Java</span>
-                        </a>
-                    </div> <br><br>   
-					
-				</div> 
-                      
-		</div>
+
+                            <h2 class="m-l-20">2. Predicate</h2>
+                                <p>
+                                    Predicate accepts an argument and return a boolean value. Predicate functional interface in Java is a type of function
+                                     that accepts a single value or argument and returns a boolean (True/ False). It provides the dunctionality of filtering, 
+                                     it filtera stream components on the base of a provided predicate. 
+                                    
+                                    <h6>Predicate Interface Methods.</h6>
+                                    <ol>
+                                        <li><b>boolean test(T t)</b></li>
+                                        <dd>- It returns true if the input argument matches the predicate, otherwise false.</dd>
+                                        <h6><b>Example of Predicate test method</b></h6>
+<pre>
+<span class="orange">public static void</span><span class="blue"> main</span>(String[] args) {  
+    <span class="orange">Predicate</span><<span class="blue">Integer</span>> pr = a -> (a > 10); <span class="blue">// Creating predicate  </span>
+    System.<span class="blue">out</span>.println(pr.test(20)); <span class="blue">// Calling Predicate method </span>       
+} 
+
+Output:
+true
+</pre>
+                                        <li><b>static  Predicate isEqual(Object targetRef)</b></li>
+                                        <dd>- t is a static method of the Predicate interface that is used to test the equality of two objects. The object can be a string, integer, or a class object.</dd>
+                                        <h6><b>Example of Predicate isEqual method</b></h6>  
+<pre>
+<span class="orange">public static void</span><span class="blue"> main</span>(String[] args) {  
+    <span class="orange">Predicate</span><<span class="blue">String</span>> pr = <span class="orange">Predicate</span>.<span class="orange">isEqual</span>("<span class="green">MyAllText</span>"); <span class="blue">// Creating predicate  </span>
+    System.<span class="blue">out</span>.println(pr.test("<span class="green">AllText</span>")); <span class="blue">// Calling Predicate method </span> 
+    System.<span class="blue">out</span>.println(pr.test("<span class="green">MyAllText</span>")); <span class="blue">// Calling Predicate method </span> 
+    System.<span class="blue">out</span>.println(pr.test("<span class="green">MyAll</span>")); <span class="blue">// Calling Predicate method </span>       
+} 
+
+Output:
+false
+true
+false
+</pre>                                      
+                                       
+                                        <li><b>default Predicate and(Predicate other)</b></li>
+                                        <dd>- This method is used to compose two expression(lambda) that represents a short-circuiting logical AND of this predicate. It can be uses to perform logical operations by combining two lambda expressions. See the example below. Here, we used and() method to check whether a number lies between two numeric range or not.</dd>
+                                        <h6><b>Example of Predicate and method</b></h6>  
+<pre>
+<span class="orange">public static void</span><span class="blue"> main</span>(String[] args) {  
+    <span class="orange">Predicate</span><<span class="blue">Integer</span>> pr1 = x <span class="orange">-></span> (x <span class="orange">></span> 20);
+    <span class="orange">Predicate</span><<span class="blue">Integer</span>> pr2 = x <span class="orange">-></span> (x <span class="orange"><</span> 80);
+    System.<span class="blue">out</span>.println(pr1.and(pr2).test(100)); <span class="blue">// Calling Predicate method </span> 
+    System.<span class="blue">out</span>.println(pr1.and(pr2).test(50)); <span class="blue">// Calling Predicate method </span> 
+    System.<span class="blue">out</span>.println(pr1.and(pr2).test(10)); <span class="blue">// Calling Predicate method </span> 
+} 
+
+Output:
+false
+true
+false
+</pre>
+                                        
+                                        
+                                        <li><b>default Predicate negate()</b></li>
+                                        <dd>- The negate() method allows invert the result of a Predicate. It returns a predicate that represents the logical negation of this predicate.</dd>
+                                        <h6><b>Example of Predicate negate method</b></h6>  
+<pre>
+<span class="orange">public static void</span><span class="blue"> main</span>(String[] args) { 
+    Predicate<<span class="blue">String</span>> startsWithCharJ = s <span class="orange">-></span> s.startsWith("<span class="orange">H</span>");
+    Predicate<<span class="blue">String</span>> hasLengthOfInt5 = s <span class="orange">-></span> s.length() == <span class="orange">5</span>;
+
+    System.<span class="blue">out</span>.println(startsWithCharJ.test("Horse")); <span class="blue">// Calling without negate method</span> 
+    System.<span class="blue">out</span>.println(hasLengthOfInt5.test("India")); <span class="blue">// Calling without negate method</span> 
+   
+    Predicate<String> negateStartsWithCharJ = startsWithCharJ.negate();
+    Predicate<String> negatehasLengthOfInt5 = hasLengthOfInt5.negate();
+
+    System.<span class="blue">out</span>.println(<span class="green">negateStartsWithCharJ</span>.test("Horse")); <span class="blue">// Calling after negate predicate</span> 
+    System.<span class="blue">out</span>.println(<span class="green">negatehasLengthOfInt5</span>.test("India")); <span class="blue">// Calling after negate predicate</span> 
+} 
+
+Output:
+true
+true
+false
+false
+</pre>
+                                       
+                                       
+                                       
+                                        <li><b>or(Predicate other)</b></li>
+                                        <dd>- The or() method works similarly to and(), but it returns true if either of the any Predicates return true.</dd>
+                                        <h6><b>Example of Predicate or method</b></h6>  
+<pre>
+    <span class="orange">public static void</span><span class="blue"> main</span>(String[] args) { 
+        Predicate<<span class="blue">String</span>> startsWithCharH = s <span class="orange">-></span> s.startsWith("<span class="orange">H</span>");
+        Predicate<<span class="blue">String</span>> hasLengthOfInt5 = s <span class="orange">-></span> s.length() == <span class="orange">5</span>;
+    
+        Predicate<String> startsWithCharHOrHasLengthOf5 = startsWithCharH.<span class="blue">or</span>(hasLengthOfInt5);
+
+        System.<span class="blue">out</span>.println(startsWithCharHOrHasLengthOf5.test("Hero")); 
+        System.<span class="blue">out</span>.println(startsWithCharHOrHasLengthOf5.test("India")); 
+        System.<span class="blue">out</span>.println(startsWithCharHOrHasLengthOf5.test("Method"));
         
+    } 
+    
+    Output:
+    true
+    true
+    false
+    </pre>
+
+                                    <h2 class="m-l-20">Bi-Predicate</h2>
+                                    <p>
+                                        Bi-Predicate is also an extension of the Predicate functional interface, which, instead of one, takes two arguments, does some processing, and returns the boolean value. 
+                                        
+                                    </p>
+
+                                    </ol>
+                             </p>       
+                             <h2 class="m-l-20">3. Function</h2>
+                             <p>
+                                The function type functional interface receives a single argument, processes it, and returns a value.
+                                 Functional interface is taking the key from the user as input and searching for the value in the map
+                                  for the given key.
+                                 
+                                 
+<pre>
+<span class="orange">public static void</span><span class="blue"> main</span>(String[] args) {  
+    <span class="orange">private</span> <span class="blue">static</span> HashMap<<span class="green">Integer, String</span>> Employee = <span class="blue">new</span> HashMap<>();
+    <span class="orange">Function</span><<span class="green">Integer, String</span>> addFunction = (<span class="green">Integer</span> ID)-> {
+        <span class="blue">if</span>(Employee.containsKey(ID)) {
+            <span class="green">return</span> Employee.get(ID);
+        }<span class="orange">else</span>{
+            <span class="green">return</span> "<span class="blue">Invalid ID</span>";
+        }
+};
+
+ System.<span class="blue">out</span>.println(addFunction.apply(500)); <span class="blue">// Returns Employee object if present in hashmap or return Invalid Id message </span>       
+} 
+
+</pre>    
+
+                            <h2 class="m-l-20">Bi Function</h2>
+                             <p>
+                                Bi-function is just like a function except it takes two arguments. Two arguments are must in Bi-function. Just like a function it also returns a value.
+                              </p>
+                        </p>   
+
+                        <h2 class="m-l-20">4. Supplier</h2>
+                             <p>
+                                The Supplier functional interface is also a type of functional interface that does not take any input 
+                                or argument and returns a single output.  On calling the supplier it simply returns a value. 
+                                The supplier takes only one generic type, the type of data it is going to return. get() is the abstract method of the Supplier.
+                                 
+                                 
+<pre>
+<span class="orange">public static void</span><span class="blue"> main</span>(String[] args) { 
+    <span class="orange">Supplier</span><<span class="green">String</span>> supplier = () -> "<span class="green">Hello World</span>";
+    System.<span class="blue">out</span>.println(supplier.get());        
+};
+
+Output:
+Hello World
+</pre>    
+                        </p>   
+                                 
+                </p>
+                            
+                <div class="container-fluid"> <br>  
+                    <span class="next-botton">Next Topic >></span>
+                    <a target="_blank" href="https://myallstudy.com/consumer-interfaces-in-java.html">
+                        <span>Consumer Interface In Java</span>
+                    </a>
+                </div> <br><br> 
+
+					
+				</div>        
+		</div>
 	</div>
 			<!--<div class="footer">
 				<spn class="blink-text">Thank you </spn>for the reading this tutorial. If you found this tutorial is helpful, request you to click on beloww Youtube icon and subscribe my YouTube Channel. 
