@@ -6,6 +6,7 @@
 
 #right-main-div{
 	border:1px solid rgba(0, 0, 0, 0.125);
+	overflow: hidden;
 }
 
 
@@ -132,3 +133,13 @@ a.list-group-item:hover{
     color: white;
 	
 }
+
+.main-content{
+		float:left;
+		border-right:1px solid rgba(0, 0, 0, 0.125);
+		padding-right:10px;
+	}
+.adv{
+	float:left;
+	
+	}
