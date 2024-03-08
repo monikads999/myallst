@@ -33,7 +33,7 @@
         <meta property="article:section" content="Functional Interfaces In Java">
         <meta property="article:published_time" content="2024-03-2T12:59:35+00:00">
         <meta property="article:modified_time" content="2024-03-6T12:59:35+00:00">
-        <meta property="og:updated_time" content="2024-03-6T12:59:35+00:00">
+        <meta property="og:updated_time" content="2024-03-8T12:59:35+00:00">
         <title>Functional Interface In Java</title>
     </head>
     <body>   
@@ -47,33 +47,33 @@
                     <ul>
                         <li>
                             <a class="list-group-item p-3 " target="_blank" href="https://myallstudy.com/stream/stream-api-in-java.html">
-                                <span class="blue">Java Stream API In Details</span>
+                                <span class="grey">Java Stream API In Details</span>
                             </a>
                         </li> 
                         <li>
                             <a class="list-group-item p-3" target="_blank" href="https://myallstudy.com/functional-interfaces-in-java-8.html">
-                                <span class="green">Functional Interface In Java</span>
+                                <span class="grey">Functional Interface In Java</span>
                             </a>
                         </li>
                         <li>
                             <a class="list-group-item p-3" target="_blank" href="https://myallstudy.com/consumer-interfaces-in-java.html">
-                                <span class="orange">Consumer Interface In Java in Details</span>
+                                <span class="grey">Consumer Interface In Java in Details</span>
                             </a>
                         </li>
                         <li>
                             <a class="list-group-item p-3" target="_blank" href="https://myallstudy.com/biconsumer-interfaces-in-java.html">
-                                <span class="blue">BiConsumer Interface In Java in Details</span>
+                                <span class="grey">BiConsumer Interface In Java in Details</span>
                             </a>
                         </li>  
                         <li>
                             <a class="list-group-item p-3 " target="_blank" href="https://myallstudy.com/predicate-interfaces-in-java.html">
-                                <span class="green">Predicate Interface In Java in Details</span>
+                                <span class="grey">Predicate Interface In Java in Details</span>
                             </a>
                         </li> 
                             
                         <li>
                             <a id="blink" class="list-group-item p-3 last" target="_blank" href="https://myallstudy.com/free-website-hosting-on-github.html">
-                                <span>Free Website Hosting on GitHub Full Tutorial</span>
+                                <span class="grey">Free Website Hosting on GitHub Full Tutorial</span>
                             </a>
                         </li>          
                     </ul>
@@ -81,30 +81,15 @@
             </div>
             <!-- Page content wrapper-->
             <div id="page-content-wrapper">
-                <!--<div class="col-md-12 col-lg-12 col-xl-12 col-sm-11 header-text">
-                    <div class="col-md-8 col-lg-8 col-xl-8 col-sm-12 fl-l">
-                        <h1 class="mt-2">Functional Interfaces In Java 8</h1>
-                    </div>
-                    <div class="col-md-4 col-lg-4 col-xl-4 col-sm-12 next-botton-top d-none d-md-block fl-l">  
-                        <span class="next-botton">Next Topic >></span>&nbsp;
-                        <a target="_blank" href="https://myallstudy.com/consumer-interfaces-in-java.html">
-                            <span>Consumer Interface In Java</span>
-                        </a>
-                    </div> -->
                     <div class="container-fluid" style="padding-bottom:10px;"> 
                         <h1 class="mt-2">Functional Interfaces In Java 8</h1>
                         <span class="next-botton">Next Topic >></span>&nbsp;
                         <a target="_blank" href="https://myallstudy.com/consumer-interfaces-in-java.html">
                             <span>Consumer Interface In Java</span>
                         </a>
-                        
                     </div>
-
-               
-            
 				<div id="right-main-div">
-					<div class="container-fluid"> 
-                        <div class="col-md-9 col-lg-9 col-xl-9 col-sm-12 main-content">       
+					<div class="col-md-9 col-lg-9 col-xl-9 col-sm-12 left-main-div" id="left-main-div">      
 						<h2> - What is Functional Interface?</h2>
 							<p>
 								An Interface that contains exactly one abstract method is known as functional interface.
@@ -120,7 +105,7 @@
 							</p>
 						
 					
-					<div class="container-fluid"> 
+					 
 						<h2> - Rules for a functional interface</h2>
 							<p><ol>
 								  <li>A functional interface must have exactly one abstract method.</li>
@@ -128,68 +113,69 @@
 								  <li>No need to declare the abstract keyword as by default the method defined inside the interface is abstract only.</li>
                             </ol>                   
 							</p>
-					</div>	
-					<div class="container-fluid"> 
+						
+					 
 						<h2> - Example of functional interface with lambda</h2>
 <pre>
-<span class="orange">/*@FunctionalInterface*/</span><span class="green"> //It is optional</span>
-<span class="orange">public interface </span> MultipleInterface {
-	public <span class="orange">int</span> <span class="blue">multiple(int x,int y)</span>;
+<code>/*@FunctionalInterface*/  </code><span class="code-comment" style="color:red;">//It is optional</span>
+<code>public interface MultipleInterface {
+	public int multiple(int x,int y);
 }
 
-<span class="orange">public class</span> Calculate {
-	<span class="orange">public static void</span> <span class="blue">main</span>(String[] args) {
-
-		//with lambda
-		MultipleInterface m = (x, y) -> {
+public class Calculate {
+	public static void main (String[] args) {</code>
+		<span class="code-comment">//with lambda</span>
+		<code>code>MultipleInterface m = (x, y) -> {
 			//System.out.println("Drawing "+width);
 			return x * y;
 		};
 
-	  <span class="orange">int</span> multipleVal =   m.multiple(<span class="green">10</span>, <span class="green">20</span>);
-	  System.<span class="blue">out</span>.println(<span class="green">"Multiple Value is "</span>+multipleVal);
+	  int multipleVal =   m.multiple(10,20);
+	  System.out.println("Multiple Value is "+multipleVal);
 }
 
 Output:
 Multiple Value is 200
+</code>
 </pre>
-					</div>	
+					
 
-					<div class="container-fluid"> 
+					
 						<h2> - @FunctionalInterface Annotation</h2>
 							<p>
                                 @FunctionalInterface annotation is optional but it is used to ensure that the functional interface
                                 can’t have more than one abstract method.  If you add more than one abstract methods, an ‘Unexpected @FunctionalInterface annotation’ message you can get.
                                 It is not mandatory to use this annotation.              
 							</p>
-					</div>	
+					
                     
-                    <div class="container-fluid"> 
+                    
 						<h2> - Example of functional interface with @FunctionalInterface annotation</h2>
 <pre>
-<span class="blue"><b>@FunctionalInterface</span><span class="green"> //It is optional</b></span>
-<span class="orange">interface </span> Area {
-	<span class="orange">int</span> <span class="blue">calculateArea(int x)</span>;
+<code>@FunctionalInterface  </code><span class="code-comment" style="color:red;">//It is optional</span>
+<code>
+interface Area {
+	int calculateArea(int x);
 }
 
-<span class="orange">class</span> Square {
-	<span class="orange">public static void</span> <span class="blue">main</span>(String[] args) {
+class Square {
+  public static void main (String[] args) {</code>
+	<span class="code-comment">//with lambda</span>
+    <code>Area a = (x) -> {			
+        return x * *;
+    };
 
-		//with lambda
-		Area a = (x) -> {			
-			return x * *;
-		};
-
-	  <span class="orange">int</span> areaVal =   a.calculateArea(<span class="green">10</span>);
-	  System.<span class="blue">out</span>.println(<span class="green">"Area of Square is "</span>+areaVal);
+    int areaVal =   a.calculateArea(10);
+    System.out.println("Area of Square is "+areaVal);
 }
 
 Output:
 Area of Square is 100
+</code>
 </pre>
-					</div>	
+					
 
-                    <div class="container-fluid"> 
+                    
 						<h2> - Types of functional interface</h2>
 							<p>
                                 <h6>There are four types of functional interfaces.</h6>
@@ -219,31 +205,37 @@ Area of Square is 100
                                     
                                     <h2 class="m-l-20"> Example of Consumer Interface</h2>
 <pre>
-<span class="blue">import java.util.function.Consumer; </span>
-<span class="orange">public <span class="blue">class</span> ConsumerInterfaceExample </span> Area {
+<code>import java.util.function.Consumer;
+public class ConsumerInterfaceExample Area {
 
-    <span class="orange">static </span> <span class="blue">void </span> welcomeGreeting (String name){
-        System.<span class="blue">out</span>.println("Welcome "+name);
+    static void welcomeGreeting (String name){
+        System.out.println("Welcome "+name);
+    }
+    static void showAge (int age){
+          System.out.println("Your age is "+age);
+    }
+    static void showSalary (int sal){
+          System.out.println("Your salary is "+sal);
     }
 
-    <span class="orange">static </span> <span class="blue">void </span> showAge (int age){
-          System.<span class="blue">out</span>.println("Your age is "+age);
-    }
+    public static void main(String[] args) {</code>
+        <span class="code-comment">//method reference</span>
+        <code>Consumer<String> consumer1 = 
+            ConsumerInterfaceExample::welcomeGreeting;</code>  
+        <span class="code-comment">// Calling Consumer method</span>
+        <code>consumer1.accept("Tejas"); </code>    
+         
+        <span class="code-comment">//method reference</span>
+        </code>Consumer</code><<code>Integer</code> <code>consumer2 =
+            ConsumerInterfaceExample::showAge; </code>
+        <span class="code-comment">// Calling Consumer method</span>
+        <code>consumer2.accept(30); </code>    
 
-    <span class="orange">static </span> <span class="blue">void </span> showSalary (int sal){
-          System.<span class="blue">out</span>.println("Your salary is "+sal);
-    }
-
-
-    <span class="orange">public static void</span> <span class="blue">main</span>(String[] args) {
-        Consumer<<span class="blue">String</span>> consumer1 = ConsumerInterfaceExample::welcomeGreeting; //method reference 
-        consumer1.accept("Tejas");   // Calling Consumer method  
-             
-        Consumer<<span class="blue">Integer</span>> consumer2 = ConsumerInterfaceExample::showAge;  //method reference
-        consumer2.accept(30);   // Calling Consumer method  
-
-        Consumer<<span class="blue">Integer</span>> consumer2 = ConsumerInterfaceExample::showSalary;  //method reference
-        consumer2.accept(20000);   // Calling Consumer method  
+        <span class="code-comment">//method reference</span>
+        <code>Consumer</code><<code>Integer</code>> <code>consumer2 = 
+            ConsumerInterfaceExample::showSalary;</code>
+        <span class="code-comment">// Calling Consumer method</span>
+        <code>consumer2.accept(20000);     
     }
 }
 
@@ -251,6 +243,7 @@ Output:
 Welcome Tejas
 Your age is 30
 Your salary is 20000
+</code>
 </pre>
 
                                 </p>
@@ -262,7 +255,9 @@ Your salary is 20000
                                     
                                 </p>
 
-                                <pre> BiConsumer<String,String> foo = (a, b) -> System.out.println(a + b); </pre>
+<pre><code>BiConsumer</code><<code>String</code>,<code>String</code>> foo = 
+     <code>(a, b) -> System.out.println(a + b);</code>
+</pre>
 
 
                                 <p>
@@ -279,99 +274,117 @@ Your salary is 20000
                                     <ol>
                                         <li><b>boolean test(T t)</b></li>
                                         <dd>- It returns true if the input argument matches the predicate, otherwise false.</dd>
-                                        <h6><b>Example of Predicate test method</b></h6>
+                                        <h2 class="m-l-20">Example of Predicate test method</h2>
+
 <pre>
-<span class="orange">public static void</span><span class="blue"> main</span>(String[] args) {  
-    <span class="orange">Predicate</span><<span class="blue">Integer</span>> pr = a -> (a > 10); <span class="blue">// Creating predicate  </span>
-    System.<span class="blue">out</span>.println(pr.test(20)); <span class="blue">// Calling Predicate method </span>       
+<code>public static void main(String[] args) { </code>
+    <span class="code-comment">// Creating predicate  </span> 
+    <code>Predicate</code><<code>Integer</code>> <code>pr = a -> (a > 10);</code>
+    <span class="code-comment">// Calling Predicate method </span> 
+    <code>System.out.println(pr.test(20));        
 } 
 
 Output:
-true
+true</code>
 </pre>
                                         <li><b>static  Predicate isEqual(Object targetRef)</b></li>
                                         <dd>- t is a static method of the Predicate interface that is used to test the equality of two objects. The object can be a string, integer, or a class object.</dd>
-                                        <h6><b>Example of Predicate isEqual method</b></h6>  
+                                        <h2 class="m-l-20">Example of Predicate isEqual method</h2>  
 <pre>
-<span class="orange">public static void</span><span class="blue"> main</span>(String[] args) {  
-    <span class="orange">Predicate</span><<span class="blue">String</span>> pr = <span class="orange">Predicate</span>.<span class="orange">isEqual</span>("<span class="green">MyAllText</span>"); <span class="blue">// Creating predicate  </span>
-    System.<span class="blue">out</span>.println(pr.test("<span class="green">AllText</span>")); <span class="blue">// Calling Predicate method </span> 
-    System.<span class="blue">out</span>.println(pr.test("<span class="green">MyAllText</span>")); <span class="blue">// Calling Predicate method </span> 
-    System.<span class="blue">out</span>.println(pr.test("<span class="green">MyAll</span>")); <span class="blue">// Calling Predicate method </span>       
+<code>public static void main(String[] args) { </code> 
+  <span class="code-comment">// Creating predicate </span>
+  <code>Predicate</code><<code>String</code>> <code>pr = 
+    Predicate.isEqual("MyAllText"); </code>
+  <span class="code-comment">// Creating predicate  </span>
+  <code>System.out.println(pr.test("AllText"));</code>
+  <span class="code-comment">// Creating predicate  </span>
+  <code>System.out.println(pr.test("MyAllText")); </code>
+  <span class="code-comment">// Creating predicate  </span>
+  <code> System.out.println(pr.test("MyAll"));     
 } 
 
 Output:
 false
 true
-false
+false</code> 
 </pre>                                      
                                        
                                         <li><b>default Predicate and(Predicate other)</b></li>
                                         <dd>- This method is used to compose two expression(lambda) that represents a short-circuiting logical AND of this predicate. It can be uses to perform logical operations by combining two lambda expressions. See the example below. Here, we used and() method to check whether a number lies between two numeric range or not.</dd>
-                                        <h6><b>Example of Predicate and method</b></h6>  
-<pre>
-<span class="orange">public static void</span><span class="blue"> main</span>(String[] args) {  
-    <span class="orange">Predicate</span><<span class="blue">Integer</span>> pr1 = x <span class="orange">-></span> (x <span class="orange">></span> 20);
-    <span class="orange">Predicate</span><<span class="blue">Integer</span>> pr2 = x <span class="orange">-></span> (x <span class="orange"><</span> 80);
-    System.<span class="blue">out</span>.println(pr1.and(pr2).test(100)); <span class="blue">// Calling Predicate method </span> 
-    System.<span class="blue">out</span>.println(pr1.and(pr2).test(50)); <span class="blue">// Calling Predicate method </span> 
-    System.<span class="blue">out</span>.println(pr1.and(pr2).test(10)); <span class="blue">// Calling Predicate method </span> 
+                                        <h2 class="m-l-20">Example of Predicate and method</h2>  
+<pre><code>public static void main(String[] args) {  
+    Predicate</code><<code>Integer</code>> <code>pr1 = x -> (x > 20);
+    Predicate</code><<code>Integer</code>> <code>pr2 = x -> (x < 80);</code>
+    <span class="code-comment">// Creating predicate method</span>
+    <code>System.out.println(pr1.and(pr2).test(100)); </code>
+    <span class="code-comment">// Creating predicate method</span>
+    <code> System.out.println(pr1.and(pr2).test(50));</code>
+    <span class="code-comment">// Creating predicate method</span>
+    <code>System.out.println(pr1.and(pr2).test(10));
 } 
 
 Output:
 false
 true
-false
+false</code>
 </pre>
                                         
                                         
                                         <li><b>default Predicate negate()</b></li>
                                         <dd>- The negate() method allows invert the result of a Predicate. It returns a predicate that represents the logical negation of this predicate.</dd>
-                                        <h6><b>Example of Predicate negate method</b></h6>  
-<pre>
-<span class="orange">public static void</span><span class="blue"> main</span>(String[] args) { 
-    Predicate<<span class="blue">String</span>> startsWithCharJ = s <span class="orange">-></span> s.startsWith("<span class="orange">H</span>");
-    Predicate<<span class="blue">String</span>> hasLengthOfInt5 = s <span class="orange">-></span> s.length() == <span class="orange">5</span>;
-
-    System.<span class="blue">out</span>.println(startsWithCharJ.test("Horse")); <span class="blue">// Calling without negate method</span> 
-    System.<span class="blue">out</span>.println(hasLengthOfInt5.test("India")); <span class="blue">// Calling without negate method</span> 
+                                        <h2 class="m-l-20">Example of Predicate negate method</h2>  
+<pre><code>public static void main(String[] args) { 
+    Predicate</code><<code>String</code>> <code>startsWithCharJ = 
+          s -> s.startsWith("H");
+    Predicate</code><<code>String</code>> <code>hasLengthOfInt5 = 
+          s -> s.length() == 5;</code>
+    
+    <span class="code-comment">// Calling without negate method</span> 
+    <code>System.out.println(startsWithCharJ.test("Horse")); 
+    System.out.println(hasLengthOfInt5.test("India"));
    
-    Predicate<String> negateStartsWithCharJ = startsWithCharJ.negate();
-    Predicate<String> negatehasLengthOfInt5 = hasLengthOfInt5.negate();
-
-    System.<span class="blue">out</span>.println(<span class="green">negateStartsWithCharJ</span>.test("Horse")); <span class="blue">// Calling after negate predicate</span> 
-    System.<span class="blue">out</span>.println(<span class="green">negatehasLengthOfInt5</span>.test("India")); <span class="blue">// Calling after negate predicate</span> 
+    Predicate</code> <<code> String</code> > <code> negateStartsWithCharJ = 
+           startsWithCharJ.negate();
+    Predicate</code> <<code> String</code> > <code> negatehasLengthOfInt5 = 
+           hasLengthOfInt5.negate();</code> 
+    
+    <span class="code-comment">// Calling after negate predicate</span> 
+    <code>System.out.println(negateStartsWithCharJ.test("Horse")); 
+    System.out.println(negatehasLengthOfInt5.test("India")); 
 } 
 
 Output:
 true
 true
 false
-false
+false</code> 
 </pre>
                                        
                                        
                                        
                                         <li><b>or(Predicate other)</b></li>
                                         <dd>- The or() method works similarly to and(), but it returns true if either of the any Predicates return true.</dd>
-                                        <h6><b>Example of Predicate or method</b></h6>  
-<pre>
-    <span class="orange">public static void</span><span class="blue"> main</span>(String[] args) { 
-        Predicate<<span class="blue">String</span>> startsWithCharH = s <span class="orange">-></span> s.startsWith("<span class="orange">H</span>");
-        Predicate<<span class="blue">String</span>> hasLengthOfInt5 = s <span class="orange">-></span> s.length() == <span class="orange">5</span>;
-    
-        Predicate<String> startsWithCharHOrHasLengthOf5 = startsWithCharH.<span class="blue">or</span>(hasLengthOfInt5);
+                                        <h2 class="m-l-20">Example of Predicate or method</h2>  
+<pre><code>public static void main(String[] args) { 
+    Predicate</code><<code>String</code>> <code>startsWithCharH = 
+          s -> s.startsWith("H");
 
-        System.<span class="blue">out</span>.println(startsWithCharHOrHasLengthOf5.test("Hero")); 
-        System.<span class="blue">out</span>.println(startsWithCharHOrHasLengthOf5.test("India")); 
-        System.<span class="blue">out</span>.println(startsWithCharHOrHasLengthOf5.test("Method"));
+    Predicate</code><<code>String</code>> <code>hasLengthOfInt5 = 
+          s -> s.length() == 5;
+
+    Predicate</code><<code>String</code>> <code>startsWithCharHOrHasLengthOf5 = 
+          startsWithCharH.or(hasLengthOfInt5);
+
+    System.out.println(startsWithCharHOrHasLengthOf5.test("Hero")); 
+    System.out.println(startsWithCharHOrHasLengthOf5.test("India")); 
+    System.out.println(startsWithCharHOrHasLengthOf5.test("Method"));
         
     } 
     
     Output:
     true
     true
-    false
+    false</code>
     </pre>
 
                                     <h2 class="m-l-20">Bi-Predicate</h2>
@@ -389,20 +402,20 @@ false
                                   for the given key.
                                  
                                  
-<pre>
-<span class="orange">public static void</span><span class="blue"> main</span>(String[] args) {  
-    <span class="orange">private</span> <span class="blue">static</span> HashMap<<span class="green">Integer, String</span>> Employee = <span class="blue">new</span> HashMap<>();
-    <span class="orange">Function</span><<span class="green">Integer, String</span>> addFunction = (<span class="green">Integer</span> ID)-> {
-        <span class="blue">if</span>(Employee.containsKey(ID)) {
-            <span class="green">return</span> Employee.get(ID);
-        }<span class="orange">else</span>{
-            <span class="green">return</span> "<span class="blue">Invalid ID</span>";
+<pre><code>public static void main(String[] args) {  
+    private static HashMap</code><<code>Integer</code>, <code>String</code>><code> Employee = 
+                new HashMap</code><><code>();
+    Function</code><<code>Integer</code>, <code>String</code>><code> addFunction = (Integer ID)-> {
+        if(Employee.containsKey(ID)) {
+            return Employee.get(ID);
+        }else{
+            return "Invalid ID";
         }
-};
-
- System.<span class="blue">out</span>.println(addFunction.apply(500)); <span class="blue">// Returns Employee object if present in hashmap or return Invalid Id message </span>       
+};</code>
+<span class="code-comment" style="color:red">// Returns Employee object if present in hashmap or return Invalid Id message </span>       
+<code>System.out.println(addFunction.apply(500)); 
 } 
-
+</code>
 </pre>    
 
                             <h2 class="m-l-20">Bi Function</h2>
@@ -418,27 +431,19 @@ false
                                 The supplier takes only one generic type, the type of data it is going to return. get() is the abstract method of the Supplier.
                                  
                                  
-<pre>
-<span class="orange">public static void</span><span class="blue"> main</span>(String[] args) { 
-    <span class="orange">Supplier</span><<span class="green">String</span>> supplier = () -> "<span class="green">Hello World</span>";
-    System.<span class="blue">out</span>.println(supplier.get());        
+<pre><code>public static void main(String[] args) { 
+    Supplier</code><<code>String</code>> <code>supplier = () -> "Hello World";
+    System.out.println(supplier.get());        
 };
 
 Output:
-Hello World
+Hello World</code>
 </pre>    
                         </p>   
                                  
                 </p>
-                <div class="d-md-none col-sm-12">
-                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8618835219556483" crossorigin="anonymous"></script>
-                    <!-- Vertical-right -->
-                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8618835219556483" data-ad-slot="1988161015" data-ad-format="auto" data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                </div> 
-
+                <div class="col-sm-12 col-md-12 bottom-add">
+                    
                 </div>            
                 <div class="container-fluid"> <br>  
                     <span class="next-botton">Next Topic >></span>
@@ -447,22 +452,15 @@ Hello World
                     </a>
                 </div> <br><br> 
 
-            </div> 
-            <div class="d-none d-md-block col-md-3 col-lg-3 col-xl-3 fl-l">
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8618835219556483" crossorigin="anonymous"></script>
-                <!-- Vertical-right -->
-                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8618835219556483" data-ad-slot="1988161015" data-ad-format="auto" data-full-width-responsive="true"></ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>   
+           
+					
+            </div> <!--end left-->
+            <!--start right-->
+            <div class="d-none d-md-block col-md-3 col-lg-3 col-sm-12 right-adv" id="right-adv">
+                
+            </div>   <!--end right-->
         </div>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8618835219556483" crossorigin="anonymous"></script>
-        <!-- Box-miduum -->
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8618835219556483" data-ad-slot="8014513316" data-ad-format="auto" data-full-width-responsive="true"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+        
     </div>
 </div>
 </div>
@@ -477,5 +475,19 @@ By using our site, you acknowledge that you have read and understood our
 <script src="js/scripts.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-077TCP3FXW"></script>
 <script src="js/gscript.js"></script>
+<script>
+window.addEventListener("load", (event) => {
+   
+    if(document.getElementById('right-adv')!=0){
+        var height = document.getElementById('left-main-div').clientHeight;//$("#left-main-div").height();
+        if(height>300){
+            height=height-117;
+        }
+        document.getElementById('right-adv').setAttribute("style","height:"+height+"px");
+    }
+    
+});
+
+</script>
 </body>
 </html>

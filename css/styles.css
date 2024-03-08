@@ -104,7 +104,8 @@ body {
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  text-align: justify; 
+  /*text-align: justify; */
+  background: #EAEDED;
 }
 
 hr {
@@ -144,7 +145,7 @@ h2, .h2 {
     font-size: 30px;
     line-height: 50px;
     font-style: oblique;
-    margin-left: -30px;
+    /*margin-left: -30px;*/
   }
 }
 
@@ -273,6 +274,7 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
   text-decoration: none;
 }
 
+
 pre,
 code,
 kbd,
@@ -281,12 +283,14 @@ samp {
   font-size: 1em;
 }
 
+
 pre {
   display: block;
   margin-top: 0;
   margin-bottom: 1rem;
   overflow: auto;
   font-size: 0.875em;
+  
 }
 pre code {
   font-size: inherit;
@@ -4861,6 +4865,7 @@ textarea.form-control-lg {
   font-size: 12px;
   border-bottom: none;
   border-right: none;
+  background: #E8F6F3;
 }
 
 .list-group-item.last {
